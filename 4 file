@@ -1,0 +1,15 @@
+const int buzzerPin = 9;
+const int melody[] = { 262, 294, 330, 349, 392, 440, 494, 523 };
+
+void setup() {
+    pinMode(buzzerPin, OUTPUT);
+}
+
+void loop() {
+    for (int i = 0; i < 8; i++) {
+        tone(buzzerPin, melody[i]);
+        delay(500);
+        noTone(buzzerPin);
+        delay(200);
+    }
+}
